@@ -1,9 +1,10 @@
-name: "Multi event pipeline / workflow" # Name of the pipeline
+name: "Multi-event pipeline / workflow" # Name of the pipeline
 on: 
-    push: # Event: Whenever a push is made to the repository on the master / test branch
+    push: # Event: Whenever a push is made to the repository on the master/test branch
         branches:
             - master
             - test
+            - main
     schedule:
         - cron: "0 10 * * 2,4"
     pull_request: # Event: Whenever a pull request is made to the repository
